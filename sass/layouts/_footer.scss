@@ -1,0 +1,100 @@
+.footer {
+  background-color: $footer-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-content {
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.footer-tablet {
+  @include for-size(tablet-landscape) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: space-between;
+
+    margin-bottom: 60px;
+  }
+
+  @include for-size(desktop) {
+    width: 570px;
+  }
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-box {
+  @include for-size(tablet-max) {
+    text-align: center;
+  }
+
+  @include for-size(mobile-max) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.address {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.714;
+  color: $primery-white-color;
+}
+
+.address a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Стили соцсетей */
+
+.join {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
+  color: $primery-white-color;
+}
+
+.join-list {
+  @include for-size(desktop) {
+    justify-content: start;
+  }
+}
+
+.join-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.join-link .icon {
+  fill: $primery-white-color;
+}

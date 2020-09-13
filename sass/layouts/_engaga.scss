@@ -1,0 +1,40 @@
+.engage {
+  display: none;
+
+  @include for-size(desktop) {
+    display: block;
+  }
+
+  padding-top: 0;
+}
+
+.engage-list {
+  display: flex;
+}
+
+.engage-item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.app-title {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primery-white-color;
+  background: rgba(47, 48, 58, 0.8);
+}
